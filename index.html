@@ -163,6 +163,43 @@
       font-size: 1.2em;
     }
 
+    /* Featured Project Card Styling (Matches Existing Theme) */
+    .project-highlight {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(0, 198, 255, 0.25);
+      border-radius: 12px;
+      padding: 18px;
+      margin-bottom: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .project-highlight:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: var(--primary);
+      transform: translateY(-2px);
+    }
+
+    .project-title {
+      font-size: 1.25em;
+      font-weight: 600;
+      color: var(--light);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .project-title i {
+      color: var(--primary);
+    }
+
+    .project-desc {
+      font-size: 0.98em;
+      color: var(--gray);
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+
     .skills-container {
       display: flex;
       flex-wrap: wrap;
@@ -188,12 +225,13 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      margin: 15px 10px 0;
-      padding: 12px 25px;
+      gap: 8px;
+      margin: 5px 0 0;
+      padding: 10px 22px;
       border: none;
       border-radius: 50px;
       color: white;
-      font-size: 1.1em;
+      font-size: 0.95em;
       text-decoration: none;
       transition: all 0.3s ease;
       cursor: pointer;
@@ -209,17 +247,6 @@
       background: linear-gradient(135deg, var(--secondary), var(--primary));
       transform: translateY(-3px);
       box-shadow: 0 8px 25px rgba(0, 198, 255, 0.6);
-    }
-
-    .btn-accent {
-      background: linear-gradient(135deg, #ff2d75, #ff6b45);
-      box-shadow: 0 4px 15px rgba(255, 45, 117, 0.4);
-    }
-
-    .btn-accent:hover {
-      background: linear-gradient(135deg, #ff6b45, #ff2d75);
-      transform: translateY(-3px);
-      box-shadow: 0 8px 25px rgba(255, 45, 117, 0.6);
     }
 
     .social-links {
@@ -284,7 +311,7 @@
       }
     }
 
-    /* Animation for skills */
+    /* Animation for profile picture */
     @keyframes float {
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-10px); }
@@ -310,7 +337,7 @@
       <img src="file.png" alt="HARIOM SINGH" class="profile-pic floating" />
       <h1>HARIOM SINGH</h1>
       <p class="tagline">Developer | Designer | Tech Enthusiast</p>
-      <p>Hello! I'm Hariom — a 18-year-old creative developer from India. I specialize in building bots, websites, and Telegram tools. As the owner of ESECH (@ESECHBHADANA), I love creating solutions that combine technology and creativity.</p>
+      <p>Hello! I'm Hariom — an 18-year-old creative developer from India. I specialize in building Android apps, bots, websites, and Telegram tools. As the owner of ESECH (@ESECHBHADANA), I love creating solutions that combine technology and creativity.</p>
 
       <div class="social-links">
         <a href="https://t.me/ESECHBHADANA" class="social-link" target="_blank" title="Telegram">
@@ -333,14 +360,15 @@
           <li><strong>Location:</strong> India</li>
           <li><strong>Age:</strong> 18 years</li>
           <li><strong>Education:</strong> 12th Grade (Biology 🧫 Stream)</li>
-          <li><strong>Interests:</strong> Video Editing, Game Development, UI/UX Design</li>
-          <li><strong>Current Focus:</strong> Enhancing my Python and JavaScript skills</li>
+          <li><strong>Interests:</strong> Android Development, Video Editing, UI/UX Design</li>
+          <li><strong>Current Focus:</strong> Enhancing my Python, Kotlin, and JavaScript skills</li>
         </ul>
       </div>
 
       <div class="info-box">
         <h2>Skills & Expertise</h2>
         <div class="skills-container">
+          <span class="skill-chip">Android Dev (Kotlin)</span>
           <span class="skill-chip">PHP Development</span>
           <span class="skill-chip">Python Bots</span>
           <span class="skill-chip">HTML/CSS/JS</span>
@@ -354,16 +382,32 @@
 
       <div class="info-box">
         <h2>Projects & Achievements</h2>
+        
+        <!-- Featured Android App Project -->
+        <div class="project-highlight">
+          <div class="project-title">
+            <i class="fab fa-android"></i> Shorts Blocker (Block-Scroll) – Android App
+          </div>
+          <p class="project-desc">
+            An open-source productivity Android app built with Kotlin and Jetpack Compose that helps users stop doomscrolling by blocking addictive short-form videos (Reels & Shorts) using Accessibility Services, boosting focus and saving screen time.
+          </p>
+          <a href="https://hariom2008h.github.io/Shorts-blocker-pages/" target="_blank" class="btn btn-primary">
+            <i class="fas fa-external-link-alt"></i> View Project & Download
+          </a>
+        </div>
+
         <ul>
           <li>Created multiple successful Telegram bots with thousands of users</li>
           <li>Developed automation systems for various online platforms</li>
-          <li>Designed user-friendly interfaces for web applications</li>
+          <li>Designed user-friendly interfaces for web and mobile applications</li>
           <li>Owner of growing Telegram channel @ESECHBHADANA</li>
         </ul>
       </div>
-   <footer>
-      © <span id="year"></span> HARIOM SINGH. All rights reserved. | Made with <i class="fas fa-heart" style="color: var(--accent);"></i> in India
-    </footer>
+
+      <footer>
+        © <span id="year"></span> HARIOM SINGH. All rights reserved. | Made with <i class="fas fa-heart" style="color: var(--accent);"></i> in India
+      </footer>
+    </div>
   </div>
 
   <script>
